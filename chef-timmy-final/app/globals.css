@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+/* Konsep: seluruh tampilan hitam-putih. Warna hanya datang dari foto makanan. */
+@theme {
+  --color-ink: #131416;
+  --color-charcoal: #1d1e21;
+  --color-graphite: #34363a;
+  --color-bone: #f5f3ee;
+  --color-ash: #a9a7a1;
+  --color-paper: #f5f3ee;
+  --color-paper-ink: #1b1c1f;
+
+  --font-sans: var(--font-poppins), system-ui, sans-serif;
+  --font-display: var(--font-oswald), "Arial Narrow", sans-serif;
+  --font-serif: var(--font-cormorant), Georgia, serif;
+}
+
+html { background: var(--color-ink); scroll-behavior: smooth; }
+
+body {
+  background: var(--color-ink);
+  color: var(--color-bone);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.08; }
+::selection { background: var(--color-bone); color: var(--color-ink); }
+
+/* Nama / logo bergaya serif lebar, seperti wordmark editorial */
+.wordmark {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-ash);
+}
+
+.subtitle {
+  font-family: var(--font-display);
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+.rule { height: 1px; width: 100%; background: currentColor; opacity: 0.8; border: 0; }
+
+/* Potret selalu hitam-putih */
+.photo-bw { filter: grayscale(1) contrast(1.06); }
+/* Foto makanan selalu berwarna: satu-satunya sumber warna di situs */
+.photo-food { transition: transform 0.8s ease; }
+.photo-food:hover { transform: scale(1.04); }
+
+.btn {
+  display: inline-block;
+  padding: 0.95rem 2.1rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.btn-light { background: var(--color-bone); color: var(--color-ink); border: 1px solid var(--color-bone); }
+.btn-light:hover { background: transparent; color: var(--color-bone); }
+.btn-ghost { border: 1px solid var(--color-bone); color: var(--color-bone); }
+.btn-ghost:hover { background: var(--color-bone); color: var(--color-ink); }
+.btn-dark { background: var(--color-paper-ink); color: var(--color-paper); border: 1px solid var(--color-paper-ink); }
+.btn-dark:hover { background: transparent; color: var(--color-paper-ink); }
+
+.btn-ghost-dark { border: 1px solid var(--color-paper-ink); color: var(--color-paper-ink); }
+.btn-ghost-dark:hover { background: var(--color-paper-ink); color: var(--color-paper); }
+
+/* Panel terang seperti halaman editorial referensi */
+.paper { background: var(--color-paper); color: var(--color-paper-ink); }
+
+.chip {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--color-graphite);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--color-ash);
+}
+
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+.rise { animation: rise 0.9s ease both; }
+.rise-2 { animation-delay: 0.15s; }
+.rise-3 { animation-delay: 0.3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rise { animation: none; }
+  .photo-food { transition: none; }
+}
+
+/* ---------- Admin ---------- */
+.input {
+  width: 100%;
+  border: 1px solid var(--color-graphite);
+  background: var(--color-charcoal);
+  color: var(--color-bone);
+  padding: 0.6rem 0.8rem;
+  font-size: 0.875rem;
+  outline: none;
+}
+.input:focus { border-color: var(--color-bone); }
+.label { display: block; margin-bottom: 0.35rem; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-ash); }
+.btn-sm { padding: 0.5rem 1rem; font-size: 0.65rem; }
+
+.hero-name {
+  font-family: var(--font-hero), sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
