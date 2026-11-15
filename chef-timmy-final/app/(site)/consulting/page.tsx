@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 };
 
 const audiences = [
-  { t: "Cafe", d: "Coffee-led and all-day concepts, from the menu to the daily rhythm of service." },
-  { t: "Restaurant", d: "New openings and existing restaurants that need a sharper concept or tighter operations." },
-  { t: "Catering", d: "Menus, production systems and costing built to deliver the same quality at scale." },
   { t: "Hotel", d: "Food and beverage outlets that meet hotel standards and guest expectations." },
+  { t: "Restaurant", d: "New openings and existing restaurants that need a sharper concept or tighter operations." },
+  { t: "Cafe", d: "Coffee-led and all-day concepts, from the menu to the daily rhythm of service." },
+  { t: "Catering", d: "Menus, production systems and costing built to deliver the same quality at scale." },
 ];
 
 export default async function ConsultingPage() {

@@ -134,7 +134,7 @@ export default async function Home() {
       <section className="border-t border-graphite px-6 py-28 text-center">
         <div className="mx-auto max-w-3xl">
           <p className="eyebrow">F&amp;B Consulting</p>
-          <h2 className="mt-4 text-4xl md:text-6xl">Opening a cafe, restaurant, catering or hotel outlet?</h2>
+          <h2 className="mt-4 text-4xl md:text-6xl">Opening a hotel, restaurant, cafe or catering business?</h2>
           <p className="mx-auto mt-6 max-w-xl text-ash">
             Concept, menu, team and systems, built with you over three to six months.
           </p>
