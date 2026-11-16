@@ -21,7 +21,7 @@ export default async function Home() {
           <hr className="rule rise rise-2 mt-8 max-w-xl text-bone" />
           <p className="subtitle rise rise-3 mt-6 max-w-xl text-2xl md:text-3xl">{c.hero_tagline}</p>
           <div className="rise rise-3 mt-10 flex flex-wrap gap-4">
-            <a href="/private-chef" className="btn btn-light">Book Private Chef</a>
+            <a href="/private-chef" className="btn btn-light">Book A Private Chef</a>
             {(c.cv_url || c.autobiography_url) && (
               <a href="/downloads" className="btn btn-ghost">CV &amp; Autobiography</a>
             )}
