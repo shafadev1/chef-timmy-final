@@ -8,7 +8,7 @@ const cormorant = Cormorant_Garamond({ subsets: ["latin"], weight: ["400", "500"
 const hero = Tenor_Sans({ subsets: ["latin"], weight: "400", variable: "--font-hero" });
 
 export const metadata: Metadata = {
-  title: "Timmy Pramudyo | Executive Chef & F&B Consultant",
+  title: "Timmy Pramudyo | F&B Consultant",
   description:
     "Executive Chef, Corporate Chef and F&B Business Consultant based in Bali. Private chef experiences and culinary consulting.",
 };
